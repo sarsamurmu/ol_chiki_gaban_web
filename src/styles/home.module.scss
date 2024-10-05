@@ -1,0 +1,97 @@
+@import './mixins.scss';
+
+.mainContent {
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include large {
+    padding: 20px;
+    padding-left: 100px;
+  }
+
+  @include just-medium {
+    padding: 50px;
+  }
+
+  >p {
+    font-size: 1.7rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 1rem;
+
+    @include small {
+      font-size: 4.5rem;
+    }
+
+    &.olchiki {
+      font-family: var(--ol-chiki);
+      font-weight: 600;
+      display: none;
+    }
+
+    >span {
+      opacity: 0;
+    }
+  }
+
+  .buttons {
+    margin-top: 20px;
+  }
+
+  button {
+    padding: 13px 24px;
+    border-radius: 100px;
+    border: none;
+    background-color: hsl(212, 100%, 53%);
+    color: white;
+    font-size: 1.1rem;
+    font-family: var(--inter);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover,
+    &:focus {
+      background-color: hsl(170, 86%, 37%);
+    }
+  }
+}
+
+.charGridContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 100;
+  opacity: 0;
+  display: none;
+
+  @include large {
+    display: block;
+  }
+}
+
+.charGrid {
+  display: grid;
+  grid-template-rows: repeat(100, 40px);
+  grid-template-columns: repeat(10, 1fr);
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0.25;
+  user-select: none;
+  font-family: var(--ol-chiki);
+
+  > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

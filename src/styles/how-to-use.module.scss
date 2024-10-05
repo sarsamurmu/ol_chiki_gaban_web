@@ -1,0 +1,66 @@
+@import './mixins.scss';
+
+.mainContent {
+  padding: 100px 100px;
+
+  @include medium {
+    padding: 100px 30px;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  .ol {
+    font-family: var(--ol-chiki);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: 500;
+  }
+
+  th {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 4px 12px;
+    font-weight: normal;
+  }
+
+  tbody th:first-child {
+    font-family: var(--ol-chiki);
+    font-size: 1.2rem;
+  }
+
+  thead th {
+    font-weight: 500;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  .tableContainer {
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+
+    @include medium {
+      display: none;
+    }
+  }
+
+  .singleTableContainer {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+
+    @include large {
+      display: none;
+    }
+
+    table {
+      width: 100%;
+    }
+  }
+}
