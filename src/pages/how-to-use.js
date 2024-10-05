@@ -93,7 +93,7 @@ const MainContent = () => {
 
       <h2>Accepting suggestions</h2>
       <p>
-        Sometimes the keyboard may show you suggestions. To accept a suggestion press the <code>Tab</code> key in your keyboard.
+        Sometimes the keyboard may show you suggestions. To accept a suggestion, press the <code>Tab</code> key in your keyboard.
         This only works when the suggestion is still showing on the screen.
       </p>
       <p>You can try writing <span className={s.ol}>ᱱᱜ</span> then pressing <code>Tab</code> to see how it works.</p>
@@ -116,7 +116,7 @@ const MainContent = () => {
 
       <h2>Enable keyboard</h2>
       <p>
-        Turn on/off the keyboard. You can use the hotkey (by default which is <code>Ctrl + Spacebar</code>)
+        Turn on/off the keyboard. You can use the hotkey (by default, which is <code>Ctrl + Spacebar</code>)
         to quickly switch between input methods.
       </p>
 
@@ -125,9 +125,18 @@ const MainContent = () => {
 
       <h2>Minimize to system tray</h2>
       <p>
-        Minimizes the keyboard to the system tray, so that you can continue using the keyboard even while the app is closed.
+        Minimizes the keyboard to the system tray, so that you can continue to use the keyboard even while the app is closed.
         You can still exit the app by right clicking the system tray icon and selecting <code>Exit</code>.
         If you uncheck this option, the app will exit as soon as you close the app window.
+      </p>
+
+      <h2>Switch keys based on context</h2>
+      <p>
+        Currently, it automatically switches between ᱦ and ᱷ based on the previously typed letter.
+        So, most of the time you would just press H and not worry if its shift or not.
+      </p>
+      <p>
+        In future, more context based key switching may come. But for now, it&apos;s limited to H key.
       </p>
 
       <h2>Key assignments</h2>
@@ -143,7 +152,7 @@ const MainContent = () => {
       <h2>Replacements</h2>
       <p>
         You can use replacement for writing long words easily. Currently, replacements are only used for
-        letters which doesn&apos;t have proper keys assignments, like <span className={s.ol}>ᱝ, ᱧ, ᱿</span>.
+        letters that do not have proper key assignment, like <span className={s.ol}>ᱝ, ᱧ, ᱿</span>.
       </p>
 
       <h2>Virtual keyboard</h2>
