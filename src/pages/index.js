@@ -6,6 +6,7 @@ import { useGSAP } from '@gsap/react'
 import { useEffect, useRef, useState } from 'react';
 import { Header } from '@/components/header';
 import { MetaHead } from '@/components/meta-head';
+import '@/components/fonts'
 
 gsap.registerPlugin(useGSAP)
 

@@ -1,7 +1,6 @@
 @import './mixins.scss';
 
 .header {
-  // background-color: aqua;
   padding: 20px 0px;
   display: flex;
   align-items: stretch;
@@ -11,6 +10,11 @@
   right: 0;
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(6px);
+  // background-color: aqua;
+
+  @include small {
+    flex-direction: column;
+  }
 
   .logoLink {
     margin-left: 80px;
@@ -18,24 +22,86 @@
     @include medium {
       margin-left: 40px;
     }
+
+    img {
+      height: 50px;
+      width: auto;
+    }
   }
 
-  img {
-    height: 50px;
-    width: auto;
+  >div {
+    display: inline-block;
+
+    @include small {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    button {
+      margin-right: 40px;
+      position: relative;
+      width: 52px;
+      background-color: transparent;
+      border: none;
+      display: none;
+
+      @include small {
+        display: inline-block;
+      }
+
+      >svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &:last-child {
+          opacity: 0;
+        }
+      }
+    }
   }
 
   ul {
     display: inline-flex;
-    // gap: 30px;
     margin: 0;
     align-items: stretch;
-    padding-inline-start: 10px;
+    padding-inline-start: 0;
+    overflow: hidden;
+    // background-color: red;
+
+    @include small {
+      display: flex;
+      flex-direction: column;
+      height: 0;
+    }
   }
 
   li {
-    list-style: none;
-    // background-color: aqua;
+    display: inline-block;
+    // list-style: none;
+    // background-color: blue;
+
+    &:first-child {
+      margin-left: 40px;
+
+      @include small {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+
+      @include small {
+        margin-right: 0;
+      }
+    }
+
+    @include small {
+      display: none;
+    }
 
     a {
       display: inline-flex;
@@ -47,11 +113,22 @@
       text-decoration: none;
       color: rgb(59, 59, 59);
       font-weight: 500;
-      margin-right: 10px;
       transition: background-color 0.1s;
-      
-      &:hover, &:focus {
+      // background-color: bisque;
+
+      &:hover,
+      &:focus {
         background-color: rgba(0, 119, 255, 0.1);
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      @include small {
+        padding: 15px 40px;
+        display: flex;
+        height: auto;
       }
     }
   }
