@@ -55,7 +55,7 @@ const MainContent = () => {
   return (
     <div ref={ref} className={s.mainContent}>
       <div>
-        <h1>
+        <h1 data-nosnippet>
           {'Ol Chiki Gaban'.split('').map((x, i) => <span key={x+i}>{x}</span>)}
         </h1>
         <h1 className={s.olchiki}>
@@ -63,7 +63,7 @@ const MainContent = () => {
         </h1>
       </div>
       <p>The best keyboard for typing Ol Chiki on Windows</p>
-      <div className={s.buttons}>
+      <div data-nosnippet className={s.buttons}>
         <Link href={'/download'}>
           <button>Download {'-->'}</button>
         </Link>
@@ -115,7 +115,7 @@ const CharacterGrid = () => {
   }, { dependencies: [arr] })
 
   return (
-    <div className={s.charGridContainer}>
+    <div data-nosnippet className={s.charGridContainer}>
       <div ref={ref} className={`${s.charGrid}`}>
         {arr.map((x, i) => <span key={i}>{x}</span>)}
       </div>

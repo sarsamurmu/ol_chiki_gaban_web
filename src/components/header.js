@@ -11,7 +11,7 @@ export const Header = () => {
   ]
 
   return (
-    <div className={s.header}>
+    <div data-nosnippet className={s.header}>
       <Link href={'/'} className={s.logoLink}>
         <Image src={logo} alt='' />
       </Link>
