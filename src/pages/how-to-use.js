@@ -8,7 +8,7 @@ const layouts = [
     'ᱚ': 'O or Shift + A',
     'ᱛ': 'T',
     'ᱜ': 'G',
-    'ᱝ': 'NG -> Tab',
+    'ᱝ': 'N, G -> Tab',
     'ᱞ': 'L',
 
     'ᱟ': 'A',
@@ -20,7 +20,7 @@ const layouts = [
     'ᱤ': 'I',
     'ᱥ': 'S',
     'ᱦ': 'Shift + H',
-    'ᱧ': 'Q or NJ -> Tab',
+    'ᱧ': 'Q or N, J -> Tab',
     'ᱨ': 'R',
     'ᱩ': 'U',
     'ᱪ': 'C',
@@ -42,12 +42,13 @@ const layouts = [
   }, {
     'ᱸ': 'Backtick key (`)',
     'ᱹ': 'Period key (.)',
+    'ᱺ': 'Backtick, Period -> Tab',
     'ᱻ': 'Shift + Backtick',
-    '-': 'Dash key',
+    'ᱼ': 'Dash key',
     'ᱽ': 'Z',
-
     '᱾': 'Shift + Period key',
-    '᱿': 'Double Period -> Tab',
+    '᱿': 'Period, Peroid -> Tab',
+    '—': 'Dash, Dash -> Tab'
   }, {
     '᱑': '1',
     '᱒': '2',

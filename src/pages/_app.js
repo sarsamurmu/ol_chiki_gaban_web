@@ -6,10 +6,10 @@ export default function App({ Component, pageProps }) {
     <>
       <Component {...pageProps} />
 
-      <Script
+      {process.env.NODE_ENV === 'production' && <Script
         defer
         data-cf-beacon='{"token": "bc4b50cd41514d01855ff104fd013e70"}'
-        src='https://static.cloudflareinsights.com/beacon.min.js' />
+        src='https://static.cloudflareinsights.com/beacon.min.js' />}
     </>
   )
 }
