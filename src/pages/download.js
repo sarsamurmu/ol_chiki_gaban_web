@@ -6,15 +6,39 @@ import s from '@/styles/download.module.scss'
 import smartscreen from '/assets/smartscreen.svg'
 import smartscreen_more from '/assets/smartscreen_more.svg'
 import '@/components/fonts'
+import { useEffect, useState } from 'react'
 
 const gitRaw = 'https://raw.githubusercontent.com/sarsamurmu/ocg-releases/refs/heads/main/'
 const setupFile = 'Ol-Chiki-Gaban-Setup.exe'
 const portableFile = 'Ol-Chiki-Gaban-Portable.zip'
 const portableFileExe = 'Ol Chiki Gaban.exe'
 
+const VersionData = () => {
+  const [releaseData, setReleaseData] = useState()
+
+  useEffect(() => {
+    fetch('https://raw.githubusercontent.com/sarsamurmu/ocg-releases/refs/heads/main/releases.win.json')
+      .then(res => res.json())
+      .then(data => setReleaseData(data))
+  }, [])
+
+  return (
+    <div data-nosnippet>
+      <p>
+        Latest version: {releaseData?.Assets[0].Version}
+      </p>
+      <p>
+        See <a href='https://github.com/sarsamurmu/ocg-releases/blob/main/CHANGELOG.md' target='_blank'>Release Notes</a>
+      </p>
+    </div>
+  )
+}
+
 const MainContent = () => {
   return (
     <div className={s.mainContent}>
+      <VersionData />
+
       <h1>
         Download Installer (Recommended)
       </h1>
@@ -48,6 +72,12 @@ const MainContent = () => {
         </li>
         <li>Extract <code>{portableFile}</code>, then run <code>{portableFileExe}</code> to start using the keyboard</li>
       </ul>
+
+      <h1>How to update</h1>
+      <p>
+        Start/restart the app while your computer is connected to the internet, the app will automatically download the latest update.
+        You may restart your app to apply the downloaded updates.
+      </p>
     </div>
   )
 }
