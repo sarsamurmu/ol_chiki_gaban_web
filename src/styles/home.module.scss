@@ -15,6 +15,17 @@
     padding: 50px;
   }
 
+  // .stack {
+  //   position: relative;
+  //   height: 100px;
+  //   width: 1000px;
+
+  //   h1 {
+  //     position: absolute;
+  //     top: 0;
+  //   }
+  // }
+
   >p {
     font-size: 1.7rem;
   }
@@ -32,6 +43,7 @@
     &.olchiki {
       font-family: var(--ol-chiki);
       font-weight: 600;
+      // margin-top: -3px;
       display: none;
     }
 
@@ -84,7 +96,7 @@
   grid-template-rows: repeat(100, 40px);
   grid-template-columns: repeat(10, 1fr);
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
   opacity: 0.25;
   user-select: none;
   font-family: var(--ol-chiki);

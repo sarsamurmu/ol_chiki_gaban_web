@@ -1,7 +1,7 @@
 import { MetaHead } from '@/components/meta-head'
 import { Header } from '@/components/header'
 import s from '@/styles/contact.module.scss'
-import '@/components/fonts'
+import '@/fonts'
 
 const mail = 'contact@olchikigaban.com'
 

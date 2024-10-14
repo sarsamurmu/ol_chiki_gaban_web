@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import { fontClassNames } from '@/components/fonts'
+import { fontClassNames } from '@/fonts'
 
 export default function Document() {
   return (

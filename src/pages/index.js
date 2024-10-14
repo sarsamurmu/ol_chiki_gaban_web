@@ -6,7 +6,7 @@ import { useGSAP } from '@gsap/react'
 import { useEffect, useRef, useState } from 'react';
 import { Header } from '@/components/header';
 import { MetaHead } from '@/components/meta-head';
-import '@/components/fonts'
+import '@/fonts'
 
 gsap.registerPlugin(useGSAP)
 
@@ -18,7 +18,7 @@ const MainContent = () => {
       repeat: -1,
       // paused: true
     })
-    const stayDuration = 15
+    const stayDuration = 10
 
     tl.set(`h1 > span`, { opacity: 0 })
 
@@ -55,7 +55,7 @@ const MainContent = () => {
 
   return (
     <div ref={ref} className={s.mainContent}>
-      <div>
+      <div className={s.stack}>
         <h1 data-nosnippet>
           {'Ol Chiki Gaban'.split('').map((x, i) => <span key={x+i}>{x}</span>)}
         </h1>

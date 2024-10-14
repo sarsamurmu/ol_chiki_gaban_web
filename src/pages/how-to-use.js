@@ -1,7 +1,7 @@
 import { MetaHead } from '@/components/meta-head'
 import { Header } from '@/components/header'
 import s from '@/styles/how-to-use.module.scss'
-import '@/components/fonts'
+import '@/fonts'
 
 const layouts = [
   {

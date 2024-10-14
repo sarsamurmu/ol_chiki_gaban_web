@@ -5,7 +5,7 @@ import Image from 'next/image'
 import s from '@/styles/download.module.scss'
 import smartscreen from '/assets/smartscreen.svg'
 import smartscreen_more from '/assets/smartscreen_more.svg'
-import '@/components/fonts'
+import '@/fonts'
 import { useEffect, useState } from 'react'
 
 const gitRaw = 'https://raw.githubusercontent.com/sarsamurmu/ocg-releases/refs/heads/main/'
