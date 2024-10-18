@@ -19,7 +19,7 @@ const MainContent = () => {
 export default function ContactPage() {
   return (
     <>
-      <MetaHead siteName='Contact us - Ol Chiki Gaban' />
+      <MetaHead namePrefix='Contact us' />
       <Header />
       <MainContent />
     </>

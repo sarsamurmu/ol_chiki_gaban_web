@@ -43,7 +43,7 @@ const MainContent = () => {
         Download Installer (Recommended)
       </h1>
 
-      <ul>
+      <ol>
         <li>
           <a href={gitRaw + setupFile}>
             Click here
@@ -58,20 +58,20 @@ const MainContent = () => {
         </li>
         <li>After the install completes, the app will start and you can now use the keyboard!</li>
         <li>We recommend reading <Link href='/how-to-use'>How to use guide</Link> for better experience.</li>
-      </ul>
+      </ol>
 
       <h1>
         Download Portable Version
       </h1>
 
-      <ul>
+      <ol>
         <li>
           <a href={gitRaw + portableFile}>
             Click here
           </a> to download the portable version
         </li>
         <li>Extract <code>{portableFile}</code>, then run <code>{portableFileExe}</code> to start using the keyboard</li>
-      </ul>
+      </ol>
 
       <h1>How to update</h1>
       <p>
@@ -85,7 +85,7 @@ const MainContent = () => {
 export default function DownloadPage() {
   return (
     <>
-      <MetaHead siteName='Download - Ol Chiki Gaban' />
+      <MetaHead namePrefix='Download' />
       <Header />
       <MainContent />
     </>

@@ -14,6 +14,14 @@ const jetbrains = JetBrains_Mono({
 const ocg = localFont({
   src: [
     {
+      path: './OCG Sans Extra Light.otf',
+      weight: '200'
+    },
+    {
+      path: './OCG Sans Light.otf',
+      weight: '300'
+    },
+    {
       path: './OCG Sans Regular.otf',
       weight: '400'
     },
@@ -24,9 +32,15 @@ const ocg = localFont({
     {
       path: './OCG Sans Bold.otf',
       weight: '700'
+    },
+    {
+      path: './OCG Sans Extra Bold.otf',
+      weight: '800'
     }
   ],
-  variable: '--ol-chiki'
+  variable: '--ol-chiki',
+  fallback: [],
+  adjustFontFallback: false
 })
 
 export const fontClassNames = [inter, jetbrains, ocg].map(x => x.variable).join(' ')

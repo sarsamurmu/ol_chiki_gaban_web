@@ -169,7 +169,7 @@ const MainContent = () => {
 export default function HowToUsePage() {
   return (
     <>
-      <MetaHead siteName='How to use - Ol Chiki Gaban' />
+      <MetaHead namePrefix='How to use' />
       <Header />
       <MainContent />
     </>

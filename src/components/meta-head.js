@@ -2,12 +2,16 @@ import Head from 'next/head'
 import faviconIco from '/assets/favicon.ico'
 
 export const MetaHead = ({
-  siteName = 'Ol Chiki Gaban',
-  description = 'The best keyboard for writing Ol Chiki on Windows'
+  namePrefix = '',
+  siteName = 'Ol Chiki Gaban | Ol Chiki Keyboard',
+  description = 'The best keyboard for writing Ol Chiki (Santali) on Windows'
 }) => {
   const canonical = 'https://olchikigaban.com'
   const brandImage = ''
   const favicon = faviconIco.src
+
+  if (namePrefix.trim())
+    siteName = namePrefix + ' - ' + siteName
 
   return (
     <Head>

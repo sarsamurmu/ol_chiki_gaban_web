@@ -21,3 +21,30 @@
     @content;
   }
 }
+
+@mixin pageBase {
+  padding: 100px 100px;
+  font-size: 1.1rem;
+
+  @include medium {
+    padding: 100px 30px;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: 500;
+  }
+}
+
+@mixin link {
+  a {
+    text-decoration: none;
+    font-weight: 500;
+    color: rgb(0, 102, 255);
+  }
+}
