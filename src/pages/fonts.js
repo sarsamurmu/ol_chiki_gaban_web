@@ -55,7 +55,6 @@ const MainContent = () => {
           <span>{name}</span>
           <p style={{ fontWeight: weight }} {...editable}>
             ᱡᱚᱦᱟᱨ ᱜᱮ ᱥᱟᱱᱟᱢ ᱠᱚ
-            {/* Sarsamurmu */}
           </p>
         </div>
       ))}

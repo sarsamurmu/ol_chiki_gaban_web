@@ -63,7 +63,7 @@ const MainContent = () => {
           {'ᱚᱞ ᱪᱤᱠᱤ ᱜᱟᱵᱟᱱ'.split('').map((x, i) => <span key={x + i}>{x}</span>)}
         </h1>
       </div>
-      <p>The best keyboard for typing Ol Chiki on Windows</p>
+      <p>The modern keyboard for typing Ol Chiki on Windows</p>
       <div data-nosnippet className={s.buttons}>
         <Link href={'/download'}>
           <button>Download {'-->'}</button>
