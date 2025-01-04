@@ -3,8 +3,8 @@ import faviconIco from '/assets/favicon.ico'
 
 export const MetaHead = ({
   namePrefix = '',
-  siteName = 'Ol Chiki Gaban | Ol Chiki Keyboard',
-  description = 'The modern keyboard for writing Ol Chiki (Santali) on Windows'
+  siteName = 'Ol Chiki Gaban | Ol Chiki Keyboard for PC',
+  description = 'The modern keyboard for writing Ol Chiki (Santali) on Windows PC'
 }) => {
   const canonical = 'https://olchikigaban.com'
   const brandImage = ''
