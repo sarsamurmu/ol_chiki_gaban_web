@@ -6,7 +6,7 @@ export const MetaHead = ({
   siteName = 'Ol Chiki Gaban | Ol Chiki Keyboard for PC',
   description = 'The modern keyboard for writing Ol Chiki (Santali) on Windows PC'
 }) => {
-  const canonical = 'https://olchikigaban.com'
+  const canonical = 'https://olchikigaban.vercel.app'
   const brandImage = ''
   const favicon = faviconIco.src
 

@@ -10,8 +10,7 @@ export const Header = () => {
   const items = [
     ['Download', '/download'],
     ['How to use', '/how-to-use'],
-    ['Fonts', '/fonts'],
-    ['Contact us', '/contact']
+    ['Fonts', '/fonts']
   ]
   const ulRef = useRef()
   const threeBarIcRef = useRef()
