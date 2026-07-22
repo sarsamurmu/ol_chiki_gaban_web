@@ -1,12 +1,12 @@
 import Head from 'next/head'
-import faviconIco from '/assets/favicon.ico'
+import faviconIco from '../../assets/favicon.ico'
 
 export const MetaHead = ({
   namePrefix = '',
   siteName = 'Ol Chiki Gaban | Ol Chiki Keyboard for PC',
-  description = 'The modern keyboard for writing Ol Chiki (Santali) on Windows PC'
+  description = 'The modern way to type Ol Chiki (Santali) on Windows'
 }) => {
-  const canonical = 'https://olchikigaban.vercel.app'
+  // const canonical = 'https://olchikigaban.vercel.app'
   const brandImage = ''
   const favicon = faviconIco.src
 
@@ -25,12 +25,12 @@ export const MetaHead = ({
       <meta property='og:site_name' content={siteName} />
 
       <meta property='og:type' content='portfolio' />
-      <meta property='og:url' content={canonical} />
+      {/* <meta property='og:url' content={canonical} /> */}
       <meta property='og:image' content={brandImage} />
       <meta property='og:description' content={description} />
       <meta property='og:site_name' content={siteName} />
       <meta property='og:locale' content='en_US' />
-      <link rel='canonical' href={canonical} />
+      {/* <link rel='canonical' href={canonical} /> */}
 
       <meta name='twitter:card' content='summary' />
       <meta name='twitter:creator' content='@sarsamurmu' />

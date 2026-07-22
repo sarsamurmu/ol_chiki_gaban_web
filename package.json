@@ -3,22 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -H 192.168.0.105",
+    "dev": "next dev -H 192.168.0.103",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@gsap/react": "^2.1.1",
-    "@primer/octicons-react": "^19.11.0",
-    "gsap": "^3.12.5",
-    "next": "14.2.14",
-    "react": "^18",
-    "react-dom": "^18",
-    "sass": "^1.79.4"
+    "@gsap/react": "^2.1.2",
+    "@primer/octicons-react": "^19.21.1",
+    "gsap": "^3.14.2",
+    "next": "16.1.1",
+    "react": "^19",
+    "react-dom": "^19",
+    "sass": "^1.97.2"
   },
   "devDependencies": {
-    "eslint": "^8",
-    "eslint-config-next": "14.2.14"
+    "eslint": "^9",
+    "eslint-config-next": "16.1.1"
   }
 }

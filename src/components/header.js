@@ -1,7 +1,7 @@
 import s from '@/styles/header.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
-import logo from '/assets/logo.svg'
+import logo from '../../assets/logo.svg'
 import { useRef } from 'react'
 import gsap from 'gsap'
 import { ThreeBarsIcon, XIcon } from '@primer/octicons-react'

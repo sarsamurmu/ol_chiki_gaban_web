@@ -1,4 +1,4 @@
-@import './mixins.scss';
+@use './mixins.scss';
 
 .header {
   padding: 20px 0px;
@@ -13,14 +13,14 @@
   z-index: 1;
   // background-color: aqua;
 
-  @include small {
+  @include mixins.small {
     flex-direction: column;
   }
 
   .logoLink {
     margin-left: 80px;
 
-    @include medium {
+    @include mixins.medium {
       margin-left: 40px;
     }
 
@@ -33,7 +33,7 @@
   >div {
     display: inline-block;
 
-    @include small {
+    @include mixins.small {
       display: flex;
       justify-content: space-between;
     }
@@ -46,7 +46,7 @@
       border: none;
       display: none;
 
-      @include small {
+      @include mixins.small {
         display: inline-block;
       }
 
@@ -71,7 +71,7 @@
     overflow: hidden;
     // background-color: red;
 
-    @include small {
+    @include mixins.small {
       display: flex;
       flex-direction: column;
       height: 0;
@@ -86,7 +86,7 @@
     &:first-child {
       margin-left: 40px;
 
-      @include small {
+      @include mixins.small {
         margin-left: 0;
         margin-top: 10px;
       }
@@ -95,12 +95,12 @@
     &:not(:last-child) {
       margin-right: 10px;
 
-      @include small {
+      @include mixins.small {
         margin-right: 0;
       }
     }
 
-    @include small {
+    @include mixins.small {
       display: none;
     }
 
@@ -126,7 +126,7 @@
         outline: none;
       }
 
-      @include small {
+      @include mixins.small {
         padding: 15px 40px;
         display: flex;
         height: auto;
