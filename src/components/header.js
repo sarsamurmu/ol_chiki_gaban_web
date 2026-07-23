@@ -6,7 +6,7 @@ import { useRef } from 'react'
 import gsap from 'gsap'
 import { ThreeBarsIcon, XIcon } from '@primer/octicons-react'
 
-export const Header = () => {
+export const Header = ({ isHome }) => {
   const items = [
     ['Download', '/download'],
     ['How to use', '/how-to-use'],
@@ -41,7 +41,7 @@ export const Header = () => {
   }
 
   return (
-    <div data-nosnippet className={s.header}>
+    <div data-nosnippet className={`${s.header} ${isHome ? s.transparent : ''}`}>
       <div>
         <Link href={'/'} className={s.logoLink}>
           <Image src={logo} alt='' />

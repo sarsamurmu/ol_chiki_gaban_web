@@ -1,11 +1,12 @@
-import Head from "next/head";
 import Link from 'next/link'
+import Image from 'next/image'
 import s from "@/styles/home.module.scss";
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useEffect, useRef, useState } from 'react';
 import { Header } from '@/components/header';
 import { MetaHead } from '@/components/meta-head';
+import sarsa_murmu from '../../assets/sarsa_murmu.svg'
 import '@/fonts'
 
 gsap.registerPlugin(useGSAP)
@@ -124,13 +125,25 @@ const CharacterGrid = () => {
   )
 }
 
+const MadeBy = () => {
+  return (
+    <div className={s.madeBy}>
+      <span>By</span>
+      <Link href={'https://sarsamurmu.github.io'} className={s.madeByLogo}>
+        <Image src={sarsa_murmu} alt="Sarsa Murmu's logo" />
+      </Link>
+    </div>
+  )
+}
+
 export default function Home() {
   return (
     <>
       <MetaHead />
-      <Header />
-      <MainContent />
       <CharacterGrid />
+      <Header isHome />
+      <MainContent />
+      {/* <MadeBy /> */}
     </>
   );
 }

@@ -5,10 +5,15 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  // background: #00ff95;
+  // background: linear-gradient(135deg, rgba(255, 0, 0, 0.1) 0%, rgba(0, 76, 255, 0.1) 100%);
+  // background-color: rgba(255, 0, 106, 0.13);
+  backdrop-filter: blur(4px);
 
   @include mixins.large {
     padding: 20px;
     padding-left: 100px;
+    background-color: #ffffff00;
   }
 
   @include mixins.just-medium {
@@ -35,6 +40,7 @@
     font-weight: 700;
     line-height: 1;
     margin-bottom: 1rem;
+    margin-top: 1rem;
 
     @include mixins.small {
       font-size: 4.5rem;
@@ -79,15 +85,16 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 30vw;
   height: 100vh;
   overflow: hidden;
-  z-index: 100;
   opacity: 0;
-  display: none;
+  // display: none;
+  left: 0;
 
   @include mixins.large {
     display: block;
+    width: 30vw;
+    left: unset;
   }
 }
 
@@ -101,9 +108,33 @@
   user-select: none;
   font-family: var(--ol-chiki);
 
-  > span {
+  >span {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+.madeBy {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+
+  // span {
+  //   text-shadow: 2px 2px 15px red;
+  // }
+
+  .madeByLogo {
+    margin-left: 6px;
+
+    img {
+      width: 56px;
+      height: 50px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 0px;
+    }
   }
 }
