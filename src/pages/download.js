@@ -3,8 +3,8 @@ import { MetaHead } from '@/components/meta-head'
 import Link from 'next/link'
 import Image from 'next/image'
 import s from '@/styles/download.module.scss'
-import smartscreen from '../../assets/smartscreen.svg'
-import smartscreen_more from '../../assets/smartscreen_more.svg'
+import smartscreen from '@/assets/smartscreen.svg'
+import smartscreen_more from '@/assets/smartscreen_more.svg'
 import '@/fonts'
 import { useEffect, useState } from 'react'
 
@@ -25,10 +25,7 @@ const VersionData = () => {
   return (
     <div data-nosnippet>
       <p>
-        Latest version: {releaseData?.Assets[0].Version}
-      </p>
-      <p>
-        See <a href='https://github.com/sarsamurmu/ocg-releases/blob/main/CHANGELOG.md' target='_blank'>Release Notes</a>
+        Latest version: {releaseData?.Assets[0].Version} (<a href='https://github.com/sarsamurmu/ocg-releases/blob/main/CHANGELOG.md' target='_blank' rel='noreferrer'>Release Notes</a>)
       </p>
     </div>
   )
@@ -53,8 +50,8 @@ const MainContent = () => {
         <li>
           When prompted with the following message, click <code>More info</code> then click <code>Run anyway</code>
           <br /><br />
-          <Image src={smartscreen} alt='Microsoft SmartScreen first page' />
-          <Image src={smartscreen_more} alt='Microsoft SmartScreen after clicking "More info"' />
+          <Image src={smartscreen} loading='eager' alt='Microsoft SmartScreen first page' />
+          <Image src={smartscreen_more} loading='eager' alt='Microsoft SmartScreen after clicking "More info"' />
         </li>
         <li>After the install completes, the app will start and you can now use the keyboard!</li>
         <li>We recommend reading <Link href='/how-to-use'>How to use guide</Link> for better experience.</li>

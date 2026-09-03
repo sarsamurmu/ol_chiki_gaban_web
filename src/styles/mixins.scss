@@ -24,7 +24,7 @@
 
 @mixin pageBase {
   padding: 100px 100px;
-  font-size: 1.1rem;
+  font-size: 1rem;
 
   @include medium {
     padding: 100px 30px;

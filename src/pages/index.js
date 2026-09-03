@@ -1,12 +1,12 @@
 import Link from 'next/link'
-import Image from 'next/image'
-import s from "@/styles/home.module.scss";
+// import Image from 'next/image'
+import s from '@/styles/home.module.scss'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { useEffect, useRef, useState } from 'react';
-import { Header } from '@/components/header';
-import { MetaHead } from '@/components/meta-head';
-import sarsa_murmu from '../../assets/sarsa_murmu.svg'
+import { useEffect, useRef, useState } from 'react'
+import { Header } from '@/components/header'
+import { MetaHead } from '@/components/meta-head'
+// import sarsa_murmu from '@/assets/sarsa_murmu.svg'
 import '@/fonts'
 
 gsap.registerPlugin(useGSAP)
@@ -21,11 +21,11 @@ const MainContent = () => {
     })
     const stayDuration = 10
 
-    tl.set(`h1 > span`, { opacity: 0 })
+    tl.set('h1 > span', { opacity: 0 })
 
-    const animateIn = (n) => {
+    const animateIn = n => {
       tl.set(`h1:nth-child(${n})`, { display: 'block' })
-      tl.fromTo(`h1:nth-child(${n}) > span`, {
+      tl.fromTo(`h1:nth-child(${n}) > span:not(.${s.break})`, {
         opacity: 0
       }, {
         opacity: 1,
@@ -34,8 +34,8 @@ const MainContent = () => {
       }, '>')
     }
 
-    const animateOut = (n) => {
-      tl.fromTo(`h1:nth-child(${n}) > span`, {
+    const animateOut = n => {
+      tl.fromTo(`h1:nth-child(${n}) > span:not(.${s.break})`, {
         opacity: 1
       }, {
         opacity: 0,
@@ -51,22 +51,21 @@ const MainContent = () => {
     animateIn(2)
     tl.to({}, { delay: stayDuration }, '>')
     animateOut(2)
-
   }, { scope: ref })
 
   return (
     <div ref={ref} className={s.mainContent}>
       <div className={s.stack}>
         <h1 data-nosnippet>
-          {'Ol Chiki Gaban'.split('').map((x, i) => <span key={x+i}>{x}</span>)}
+          {'Ol Chiki^ Gaban'.split('').map((x, i) => <span className={x === '^' ? s.break : ''} key={x + i}>{x === '^' ? '' : x}</span>)}
         </h1>
         <h1 className={s.olchiki}>
-          {'ᱚᱞ ᱪᱤᱠᱤ ᱜᱟᱵᱟᱱ'.split('').map((x, i) => <span key={x + i}>{x}</span>)}
+          {'ᱚᱞ ᱪᱤᱠᱤ^ ᱜᱟᱵᱟᱱ'.split('').map((x, i) => <span className={x === '^' ? s.break : ''} key={x + i}>{x === '^' ? '' : x}</span>)}
         </h1>
       </div>
       <p>The modern way to type Ol&nbsp;Chiki on Windows</p>
       <div data-nosnippet className={s.buttons}>
-        <Link href={'/download'}>
+        <Link href='/download'>
           <button>Download {'-->'}</button>
         </Link>
       </div>
@@ -75,12 +74,12 @@ const MainContent = () => {
 }
 
 const chars = 'ᱧᱣᱮᱨᱛᱭᱩᱤᱳᱯᱟᱥᱫᱝᱜᱷᱦᱡᱠᱞᱲᱰᱪᱶᱵᱱᱬᱢᱴᱚ'
-const elementInEachRow = 10;
-const getRandomChars = (length) => {
+const elementInEachRow = 10
+const getRandomChars = length => {
   const arr = Array(length).fill(0)
   for (let i = 0; i < length; i++) {
     let char
-    while ((char = chars[Math.floor(Math.random() * chars.length)]) && (char === arr[i-1])) {}
+    while ((char = chars[Math.floor(Math.random() * chars.length)]) && (char === arr[i - 1])) { /* noop */ }
     arr[i] = char
   }
   return arr
@@ -125,16 +124,16 @@ const CharacterGrid = () => {
   )
 }
 
-const MadeBy = () => {
-  return (
-    <div className={s.madeBy}>
-      <span>By</span>
-      <Link href={'https://sarsamurmu.github.io'} className={s.madeByLogo}>
-        <Image src={sarsa_murmu} alt="Sarsa Murmu's logo" />
-      </Link>
-    </div>
-  )
-}
+// const MadeBy = () => {
+//   return (
+//     <div className={s.madeBy}>
+//       <span>By</span>
+//       <Link href={'https://sarsamurmu.github.io'} className={s.madeByLogo}>
+//         <Image src={sarsa_murmu} alt="Sarsa Murmu's logo" />
+//       </Link>
+//     </div>
+//   )
+// }
 
 export default function Home() {
   return (
@@ -145,5 +144,5 @@ export default function Home() {
       <MainContent />
       {/* <MadeBy /> */}
     </>
-  );
+  )
 }

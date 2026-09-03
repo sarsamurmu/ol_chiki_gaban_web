@@ -1,7 +1,7 @@
 @use './mixins.scss';
 
 .header {
-  padding: 20px 0px;
+  padding: 16px 0px;
   display: flex;
   align-items: stretch;
   position: fixed;
@@ -11,7 +11,6 @@
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(6px);
   z-index: 1;
-  // background-color: aqua;
 
   @include mixins.small {
     flex-direction: column;

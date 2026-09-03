@@ -4,71 +4,33 @@
   @include pageBase;
   @include link;
 
-  p:focus {
-    outline: none;
-  }
+  .downloadBtn {
+    background-color: hsl(212, 100%, 53%);
+    border: none;
+    border-radius: 100px;
+    padding: 12px 24px;
+    color: white;
+    font-family: var(--inter);
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 10px 0px;
+    cursor: pointer;
+    transition: 0.1s;
 
-  --sample-color: hsl(0, 0%, 2%);
-  --oi: var(--ol-chiki), var(--inter);
-
-  .previewBox {
-    font-family: var(--oi);
-    font-size: 7rem;
-    line-height: 1;
-    margin: 0;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-    color: var(--sample-color);
-
-    @include small {
-      font-size: 3rem;
+    &:hover, &:focus {
+      background-color: hsl(170, 86%, 37%);
     }
   }
 
-  .smallPreviewBox {
-    span {
-      opacity: 0.4;
-      font-weight: 500;
-    }
-
-    p {
-      font-family: var(--oi);
-      font-size: 5.8rem;
-      line-height: 1;
-      margin: 0;
-      margin-bottom: 3rem;
-      margin-top: 1rem;
-      color: var(--sample-color);
-
-      @include small {
-        font-size: 3rem;
-        margin-bottom: 2rem;
-      }
-    }
+  .label {
+    color: hsl(0, 0%, 20%);
   }
 
-  .samplePassage {
-    >span {
-      opacity: 0.5;
-      font-weight: 500;
-      display: block;
-      font-family: var(--oi);
+  .editBox {
+    font-size: 3rem;
+
+    &:focus {
+      outline: none;
     }
-
-    p {
-      font-family: var(--ol-chiki);
-      line-height: 1.5;
-      text-align: justify;
-      margin-top: 1rem;
-
-      +span {
-        text-align: right;
-      }
-    }
-  }
-
-  li {
-    line-height: 1.6;
-    margin-bottom: 5px;
   }
 }

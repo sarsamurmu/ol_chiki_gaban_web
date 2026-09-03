@@ -1,14 +1,15 @@
 @use './mixins.scss';
 
 .mainContent {
+  width: 100vw;
   padding: 30px;
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  // background: #00ff95;
-  // background: linear-gradient(135deg, rgba(255, 0, 0, 0.1) 0%, rgba(0, 76, 255, 0.1) 100%);
-  // background-color: rgba(255, 0, 106, 0.13);
-  backdrop-filter: blur(4px);
+
+  @include mixins.medium {
+    backdrop-filter: blur(4px);
+  }
 
   @include mixins.large {
     padding: 20px;
@@ -20,16 +21,25 @@
     padding: 50px;
   }
 
-  // .stack {
-  //   position: relative;
-  //   height: 100px;
-  //   width: 1000px;
+  .stack {
+    position: relative;
+    height: 80px;
+    width: 1000px;
 
-  //   h1 {
-  //     position: absolute;
-  //     top: 0;
-  //   }
-  // }
+    @include mixins.small {
+      height: 160px;
+      width: calc(100vw - 30px);
+
+      span.break {
+        display: block;
+      }
+    }
+
+    h1 {
+      position: absolute;
+      top: 0;
+    }
+  }
 
   >p {
     font-size: 1.7rem;
@@ -47,10 +57,10 @@
     }
 
     &.olchiki {
-      font-family: var(--ol-chiki);
-      font-weight: 600;
-      // margin-top: -3px;
+      font-family: var(--ocg-pro);
+      font-weight: 700;
       display: none;
+      top: 10px;
     }
 
     >span {
@@ -106,7 +116,7 @@
   font-weight: 500;
   opacity: 0.25;
   user-select: none;
-  font-family: var(--ol-chiki);
+  font-family: var(--ocg-pro);
 
   >span {
     display: flex;

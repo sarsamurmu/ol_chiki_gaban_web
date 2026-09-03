@@ -5,15 +5,19 @@
   @include link;
 
   li {
-    line-height: 1.6;
+    line-height: 1.7;
 
     &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
 
       @include small {
-        margin-bottom: 15px;
+        margin-bottom: 12px;
       }
     }
+  }
+
+  h1 {
+    font-size: 2rem;
   }
 
   img {

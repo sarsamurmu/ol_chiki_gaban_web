@@ -1,7 +1,7 @@
 import s from '@/styles/header.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
-import logo from '../../assets/logo.svg'
+import logo from '@/assets/logo.svg'
 import { useRef } from 'react'
 import gsap from 'gsap'
 import { ThreeBarsIcon, XIcon } from '@primer/octicons-react'
@@ -10,7 +10,8 @@ export const Header = ({ isHome }) => {
   const items = [
     ['Download', '/download'],
     ['How to use', '/how-to-use'],
-    ['Fonts', '/fonts']
+    ['Fonts', '/fonts'],
+    ['Contact', '/contact']
   ]
   const ulRef = useRef()
   const threeBarIcRef = useRef()
@@ -24,12 +25,13 @@ export const Header = ({ isHome }) => {
       gsap.set(el, { height: 'auto' })
       const height = el.getBoundingClientRect().height
       gsap.set(el, { height: 0 })
-      gsap.to(el, { height })
+      gsap.to(el, { height, duration: 0.2 })
       gsap.to(threeBarIc, { rotate: -45, opacity: 0, duration: 0.2 })
       gsap.fromTo(xIc, { rotate: 45 }, { rotate: 0, opacity: 1, duration: 0.2 })
     } else {
       gsap.to(el, {
         height: 0,
+        duration: 0.2,
         onComplete() {
           el.style.removeProperty('height')
           gsap.set(el.querySelectorAll('li'), { display: 'none' })
@@ -43,7 +45,7 @@ export const Header = ({ isHome }) => {
   return (
     <div data-nosnippet className={`${s.header} ${isHome ? s.transparent : ''}`}>
       <div>
-        <Link href={'/'} className={s.logoLink}>
+        <Link href='/' className={s.logoLink}>
           <Image src={logo} alt='' />
         </Link>
         <button onClick={toggle}>
@@ -54,7 +56,7 @@ export const Header = ({ isHome }) => {
       <ul ref={ulRef}>
         {items.map(([name, link]) => (
           <li key={link}>
-            <Link href={link}>{name}</Link>
+            <Link href={link} target={link.startsWith('https:') ? '_blank' : ''}>{name}</Link>
           </li>
         ))}
       </ul>

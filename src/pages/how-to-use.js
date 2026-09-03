@@ -3,6 +3,7 @@ import { Header } from '@/components/header'
 import s from '@/styles/how-to-use.module.scss'
 import '@/fonts'
 
+/* eslint-disable @stylistic/quote-props */
 const layouts = [
   {
     'ᱚ': 'O or Shift + A',
@@ -63,6 +64,7 @@ const layouts = [
     '᱐': '0',
   }
 ]
+/* eslint-enable */
 
 const LayoutTable = ({ layout, ...props }) => (
   <table {...props}>
@@ -89,13 +91,13 @@ const MainContent = () => {
       <h1>Basic usage</h1>
       <p>
         Open Ol Chiki Gaban. Make sure <code>Enable keyboard</code> is checked.
-        Now you can write Ol Chiki everywhere. You can press <code>Ctrl + Spacebar</code> anytime to
+        You can now write in Ol Chiki anywhere. Press <code>Ctrl + Spacebar</code> anytime to
         switch between Ol Chiki and English.
       </p>
 
       <h2>Accepting suggestions</h2>
       <p>
-        Sometimes the keyboard may show you suggestions. To accept a suggestion, press the <code>Tab</code> key in your keyboard.
+        Sometimes, the keyboard may show you suggestions. To accept a suggestion, press the <code>Tab</code> key in your keyboard.
         This only works when the suggestion is still showing on the screen.
       </p>
       <p>You can try writing <span className={s.ol}>ᱱᱜ</span> then pressing <code>Tab</code> to see how it works.</p>
@@ -123,11 +125,11 @@ const MainContent = () => {
       </p>
 
       <h2>Custom hotkey</h2>
-      <p>If you don&apos;t like the current hotkey, you can change the hotkey that will be used to switch keyboard.</p>
+      <p>The hotkey is used to switch between Ol Chiki and English. If you don't like the current hotkey, you can change it to whatever you prefer</p>
 
       <h2>Minimize to system tray</h2>
       <p>
-        Minimizes the keyboard to the system tray, so that you can continue to use the keyboard even while the app is closed.
+        Minimizes the keyboard to the system tray so that you can continue using it even after closing the app window.
         You can still exit the app by right clicking the system tray icon and selecting <code>Exit</code>.
         If you uncheck this option, the app will exit as soon as you close the app window.
       </p>
@@ -135,32 +137,32 @@ const MainContent = () => {
       <h2>Switch keys based on context</h2>
       <p>
         Currently, it automatically switches between ᱦ and ᱷ based on the previously typed letter.
-        So, most of the time you would just press H and not worry if its shift or not.
+        So, most of the time, you can simply press <code>H</code> without worrying about whether to use Shift or not.
       </p>
       <p>
-        In future, more context based key switching may come. But for now, it&apos;s limited to H key.
+        In the future, more context-based key switching may be added. But for now, it's limited to H key.
       </p>
 
       <h2>Key assignments</h2>
       <p>
-        Using this you can change the default layout of the keyboard. After editing, click <code>Save</code> to start using your own layout.
+        You can use this to change the default keyboard layout. After editing, click <code>Save</code> to start using your own layout.
         If something goes wrong, you can always use <code>Reset to default</code>.
       </p>
       <p>
-        <b><i>NOTE:</i></b> Use <code>d</code> to retain the default function of any key.
-        You can find that for all number keys, the {`"Shift"`} is set to <code>d</code>.
+        <b><i>NOTE:</i></b> Use <code>d</code> to retain the default function of a key.
+        You can find that for all number keys, the {'"Shift"'} is set to <code>d</code>.
       </p>
 
       <h2>Replacements</h2>
       <p>
-        You can use replacement for writing long words easily. Currently, replacements are only used for
-        letters that do not have proper key assignment, like <span className={s.ol}>ᱝ, ᱧ, ᱿</span>.
+        You can use replacements to type long words more easily. Currently, replacements are only used for 
+        letters that do not have a dedicated key assignment, such as <span className={s.ol}>ᱝ, ᱧ, ᱿</span>.
       </p>
 
       <h2>Virtual keyboard</h2>
       <p>
-        Opens the virtual keyboard for typing.
-        You can also open by right clicking the system tray icon and selecting <code>Open Virtual keyboard</code>.
+        Opens the virtual keyboard for typing. 
+        You can also open it by right-clicking the system tray icon and selecting <code>Open Virtual keyboard</code>.
       </p>
     </div>
   )
