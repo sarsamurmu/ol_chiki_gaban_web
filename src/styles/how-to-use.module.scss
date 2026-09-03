@@ -32,7 +32,7 @@
     align-items: flex-start;
     justify-content: space-evenly;
 
-    @include medium {
+    @include mixins.medium {
       display: none;
     }
   }
@@ -42,7 +42,7 @@
     align-items: stretch;
     justify-content: stretch;
 
-    @include large {
+    @include mixins.large {
       display: none;
     }
 

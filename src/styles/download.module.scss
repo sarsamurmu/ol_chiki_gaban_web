@@ -10,7 +10,7 @@
     &:not(:last-child) {
       margin-bottom: 10px;
 
-      @include small {
+      @include mixins.small {
         margin-bottom: 12px;
       }
     }
@@ -24,20 +24,20 @@
     width: 36vw;
     height: auto;
 
-    @include large {
+    @include mixins.large {
       &:first-of-type {
         margin-right: 20px;
       }
     }
 
-    @include just-medium {
+    @include mixins.just-medium {
       width: 40vw;
       &:first-of-type {
         margin-right: 20px;
       }
     }
 
-    @include small {
+    @include mixins.small {
       width: max-content;
 
       &:first-of-type {
