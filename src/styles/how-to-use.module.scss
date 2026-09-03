@@ -1,7 +1,7 @@
-@import './mixins.scss';
+@use './mixins.scss';
 
 .mainContent {
-  @include pageBase;
+  @include mixins.pageBase;
   font-size: 1rem;
 
   .ol {

@@ -1,6 +1,6 @@
-@import './mixins.scss';
+@use './mixins.scss';
 
 .mainContent {
-  @include pageBase;
-  @include link;
+  @include mixins.pageBase;
+  @include mixins.link;
 }
