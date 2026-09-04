@@ -72,8 +72,8 @@ const MainContent = () => {
 
       <h1>How to update</h1>
       <p>
-        Start/restart the app while your computer is connected to the internet, the app will automatically download the latest update.
-        You may restart your app to apply the downloaded updates.
+        Start the app while your computer is connected to the internet.
+        The app will automatically download the latest update and apply it the next time you open the app.
       </p>
     </div>
   )

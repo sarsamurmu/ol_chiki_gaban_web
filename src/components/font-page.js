@@ -8,7 +8,7 @@ const MainContent = ({ fontName, variations, fontClassName, archiveName, childre
     <div className={s.mainContent}>
       <h1>{fontName}</h1>
       {children}
-      <a href={`/fonts/${archiveName}.zip`}><button className={s.downloadBtn}>↓ Download Font</button></a>
+      <a href={`/fonts/${archiveName}.zip`}><button className={s.downloadBtn}>↓&nbsp;&nbsp;Download Font</button></a>
       <h2>Styles</h2>
       {variations.map(([weight, name, isItalic]) => (
         <div key={weight + name + isItalic} className={s.preview}>
